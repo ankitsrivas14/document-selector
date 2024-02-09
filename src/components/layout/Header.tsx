@@ -1,16 +1,22 @@
 import { APPLICATION_STEPS } from '../../data/applications';
 import { ApplicationStepType } from '../../types';
 import Step from '../shared/Step';
-import './Header.css'
 import ArrowIcon from '../../assets/icons/arrow-right.svg';
 import Cross from '../../assets/icons/cross.svg';
 
 const Header = () => {
     return (
-        <header className="abc">
-            <div className="def">
-                <span className="ghi">Select Agreements, Notices and Other Documents</span>
-                <button className="jkl">
+        <header className="px-6 py-4 border border-solid border-c-gray-100">
+            <div className="flex justify-between items-center mb-6">
+                <span className="text-2xl font-bold text-c-gray-900">
+                    Select Agreements, Notices and Other Documents
+                </span>
+                <button 
+                    className="
+                        px-3 py-2 flex items-center border-solid border border-c-gray-100
+                        gap-1.5 font-semibold text-c-gray-900 rounded-lg text-sm
+                    "
+                >
                     <img src={Cross} />
                     Save & Close
                 </button>
