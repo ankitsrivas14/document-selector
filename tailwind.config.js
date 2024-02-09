@@ -10,6 +10,7 @@ export default {
         'c-gray-100': '#E5E7EB',
         'c-gray-900': '#111928',
         'accent': '#ff5a1f',
+        'accent-light': '#fff8f1',
         'success': '#0e9f6e',
         'gray-1': '#4b5563',
       },
