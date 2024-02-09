@@ -1,3 +1,4 @@
+import FormViewer from "./components/FormViewer";
 import Header from "./components/layout/Header";
 import Navbar from "./components/layout/Navbar";
 
@@ -8,6 +9,7 @@ const App = () => {
         <Navbar />
         <div className="w-full">
           <Header />
+          <FormViewer />
         </div>
       </div>
     </div>
