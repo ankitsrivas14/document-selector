@@ -1,0 +1,26 @@
+.abc{
+    padding: 16px 24px;
+    border: solid 1px #e5e7eb;
+}
+.def{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+.ghi{
+    font-size: 24px;
+    font-weight: bold;
+    color: #111928;
+}
+.jkl{
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: solid 1px #e5e7eb;
+    color: #111928;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
