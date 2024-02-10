@@ -1,6 +1,6 @@
-import DetailsCard from "./shared/DetailsCard";
-import AvailableDocuments from "./AvailableDocuments";
-import SelectedDocuments from "./SelectedDocuments";
+import DetailsCard from "../components/shared/DetailsCard";
+import AvailableDocuments from "../components/AvailableDocuments";
+import SelectedDocuments from "../components/SelectedDocuments";
 
 const FormViewer = () => {
     return (

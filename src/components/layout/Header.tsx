@@ -6,7 +6,7 @@ import Cross from '../../assets/icons/cross.svg';
 
 const Header = () => {
     return (
-        <header className="px-6 py-4 border border-solid border-gray-3 sticky top-0 left-0 bg-white z-2">
+        <header className="px-6 py-4 border border-solid border-gray-3 sticky top-0 left-0 bg-white z-10">
             <div className="flex justify-between items-center mb-6">
                 <span className="text-2xl font-bold text-gray-4">
                     Select Agreements, Notices and Other Documents

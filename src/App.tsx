@@ -1,4 +1,4 @@
-import FormViewer from "./components/FormViewer";
+import AgreementsStep from "./features/AgreementsStep";
 import Header from "./components/layout/Header";
 import Navbar from "./components/layout/Navbar";
 import { DocSelectorProvider } from "./context/docSelectorContext";
@@ -11,7 +11,7 @@ const App = () => {
         <div className="w-full">
           <Header />
           <DocSelectorProvider>
-            <FormViewer />
+            <AgreementsStep />
           </DocSelectorProvider>
         </div>
       </div>
