@@ -7,12 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        'c-gray-100': '#E5E7EB',
-        'c-gray-900': '#111928',
         'accent': '#ff5a1f',
         'accent-light': '#fff8f1',
         'success': '#0e9f6e',
         'gray-1': '#4b5563',
+        'gray-2': '#f9fafb',
+        'gray-3': '#E5E7EB',
+        'gray-4': '#111928',
       },
     },
   },

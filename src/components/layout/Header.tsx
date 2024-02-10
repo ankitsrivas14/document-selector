@@ -6,15 +6,15 @@ import Cross from '../../assets/icons/cross.svg';
 
 const Header = () => {
     return (
-        <header className="px-6 py-4 border border-solid border-c-gray-100">
+        <header className="px-6 py-4 border border-solid border-gray-3 sticky top-0 left-0 bg-white z-2">
             <div className="flex justify-between items-center mb-6">
-                <span className="text-2xl font-bold text-c-gray-900">
+                <span className="text-2xl font-bold text-gray-4">
                     Select Agreements, Notices and Other Documents
                 </span>
                 <button 
                     className="
-                        px-3 py-2 flex items-center border-solid border border-c-gray-100
-                        gap-1.5 font-semibold text-c-gray-900 rounded-lg text-sm
+                        px-3 py-2 flex items-center border-solid border border-gray-3
+                        gap-1.5 font-semibold text-gray-4 rounded-lg text-sm
                     "
                 >
                     <img src={Cross} />
