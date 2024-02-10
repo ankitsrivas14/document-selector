@@ -18,7 +18,7 @@ const useDocSelector = () => {
 
     return {
         selectedDocs,
-        updateSelectedDocs
+        updateSelectedDocs,
     }
 }
 

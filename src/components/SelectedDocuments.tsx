@@ -22,13 +22,14 @@ export const SelectedDocuments = () => {
                 </div>
             ) : (
                 <div className="border border-solid border-success mt-3 rounded-md p-2">
-                    {selectedDocs.map((doc: DocumentType) => (
+                    {selectedDocs.map((doc: DocumentType, index) => (
                         <ListItem 
                             key={doc.id} 
                             name={doc.name} 
                             startIconType={ICON_NAME.TICK as IconName}
                             endIconType={ICON_NAME.CROSS as IconName}
                             onItemClick={() => updateSelectedDocs(doc)}
+                            isLast={index === selectedDocs.length - 1}
                         />
                     ))}
                 </div>

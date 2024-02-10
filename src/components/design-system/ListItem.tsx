@@ -10,6 +10,7 @@ interface ListItemProps {
     startIconType?: IconName;
     endIconType?: IconName;
     onItemClick?: () => void;
+    isLast?: boolean;
 }
 
 const getIcon = (type: IconName) => {
@@ -33,6 +34,7 @@ const ListItem = (props: ListItemProps) => {
         startIconType,
         endIconType,
         onItemClick,
+        isLast,
     } = props;
 
     const handleItemClick = () => {
@@ -43,10 +45,11 @@ const ListItem = (props: ListItemProps) => {
 
     return (
         <div 
-            className='
-                px-1.5 py-2 mb-2.5 text-gray-4 text-sm font-medium 
-                cursor-pointer hover:bg-accent-light
-            ' 
+            className={`
+                px-1.5 py-2 text-gray-4 text-sm font-medium 
+                cursor-pointer hover:bg-accent-light 
+                ${isLast ? 'mb-0' : 'r mb-2.5'}
+            `}
             onClick={handleItemClick}
         >
             <div className='flex justify-between items-center'>

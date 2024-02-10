@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import useDocSelector from "../hooks/useDocSelector";
 import DocumentsList from "./DocumentsList";
 import SearchInput from "./design-system/SearchInput";
 import Select from "./design-system/Select";
@@ -5,6 +7,12 @@ import Switch from "./design-system/Switch";
 import FormCard from "./shared/FormCard";
 
 const AvailableDocuments = () => {
+    const [isSwitchEnabled, setIsSwitchEnabled] = useState(false);
+
+    const handleSwitchToggle = () => {
+        setIsSwitchEnabled((prev) => !prev);
+    }
+
     return (
         <FormCard heading="Available Documents">
             <SearchInput />
@@ -17,7 +25,7 @@ const AvailableDocuments = () => {
             </div>
             <div className="flex justify-between items-center mt-3">
                 <div className="text-sm font-medium my-3">53 Available Documents</div>
-                <Switch />
+                <Switch enabled={isSwitchEnabled} toggleSwitch={handleSwitchToggle}>Select all</Switch>
             </div>
             <DocumentsList />
         </FormCard>
