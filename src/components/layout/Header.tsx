@@ -2,7 +2,9 @@ import { APPLICATION_STEPS } from '../../data/applications';
 import { ApplicationStepType } from '../../types';
 import Step from '../shared/Step';
 import ArrowIcon from '../../assets/icons/arrow-right.svg';
-import Cross from '../../assets/icons/cross.svg';
+import Button from '../design-system/Button';
+import { ICON_NAME } from '../../constants/design-system';
+import { IconName } from '../../types/design-system';
 
 const Header = () => {
     return (
@@ -11,15 +13,7 @@ const Header = () => {
                 <span className="text-2xl font-bold text-gray-4">
                     Select Agreements, Notices and Other Documents
                 </span>
-                <button 
-                    className="
-                        px-3 py-2 flex items-center border-solid border border-gray-3
-                        gap-1.5 font-semibold text-gray-4 rounded-lg text-sm
-                    "
-                >
-                    <img src={Cross} />
-                    Save & Close
-                </button>
+                <Button startIcon={ICON_NAME.CROSS as IconName}>Save & Close</Button>
             </div>
             <div className='flex'>
                 {APPLICATION_STEPS.map((step: ApplicationStepType, index) => (

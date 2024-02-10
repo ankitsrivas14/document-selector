@@ -2,6 +2,7 @@ import AgreementsStep from "./features/AgreementsStep";
 import Header from "./components/layout/Header";
 import Navbar from "./components/layout/Navbar";
 import { DocSelectorProvider } from "./context/docSelectorContext";
+import SaveChanges from "./components/shared/SaveChanges";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
           <DocSelectorProvider>
             <AgreementsStep />
           </DocSelectorProvider>
+          <SaveChanges />
         </div>
       </div>
     </div>
