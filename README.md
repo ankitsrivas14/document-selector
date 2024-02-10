@@ -11,8 +11,8 @@ Before you begin, ensure you have [Node.js](https://nodejs.org/) installed on yo
 First, clone the repository and navigate to the project directory:
 
 ```bash
-git clone <repository-url>
-cd <project-name>
+git clone git@github.com:ankitsrivas14/document-selector.git
+cd document-selector
 ```
 
 Next, install the dependencies:
