@@ -1,11 +1,17 @@
+import { ICON_NAME } from "../constants/design-system";
+import { IconName } from "../types/design-system";
 import DocumentsList from "./DocumentsList";
+import ListItem from "./design-system/ListItem";
 import SearchInput from "./design-system/SearchInput";
 import Select from "./design-system/Select";
 import Switch from "./design-system/Switch";
 import DetailsCard from "./shared/DetailsCard";
 import FormCard from "./shared/FormCard";
+import useDocSelector from "../hooks/useDocSelector";
+import { DocumentType } from "../types";
 
 const FormViewer = () => {
+    const { selectedDocs, updateSelectedDocs } = useDocSelector();
     return (
         <div className="mx-auto w-[1024px] mt-6">
             <DetailsCard 
@@ -33,6 +39,16 @@ const FormViewer = () => {
                 </FormCard>
                 <FormCard heading="Selected Documents">
                     <SearchInput />
+                    <div className="border border-solid border-success mt-3 rounded-md p-2">
+                        {selectedDocs.map((doc: DocumentType) => (
+                            <ListItem 
+                                key={doc.id} 
+                                name={doc.name} 
+                                endIconType={ICON_NAME.CROSS as IconName}
+                                onItemClick={() => updateSelectedDocs(doc)}
+                            />
+                        ))}
+                    </div>
                 </FormCard>
             </div>
         </div>
