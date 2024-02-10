@@ -1,4 +1,5 @@
 import SearchIcon from '../../assets/icons/search.svg'
+import { SEARCH, createMessage } from '../../constants/messages';
 const SearchInput = () => {
     return (
         <div className="flex items-center space-x-2 border border-solid border-gray-3 rounded-lg p-2 shadow-sm">
@@ -6,7 +7,7 @@ const SearchInput = () => {
             <input
                 className="flex-1 outline-none text-sm"
                 type="text"
-                placeholder="Search"
+                placeholder={createMessage(SEARCH)}
             />
         </div>
     );

@@ -7,11 +7,11 @@ import FolderIcon from '../../assets/icons/folder.svg';
 import AccountIcon from '../../assets/icons/account.svg';
 
 const NavbarItems = [
-    {id: 'home', icon: HomeIcon, label: 'Home'},
-    {id: 'members', icon: MembersIcon, label: 'Members'},
-    {id: 'messages', icon: MessagesIcon, label: 'Messages'},
-    {id: 'settings', icon: SettingsIcon, label: 'Settings'},
-    {id: 'folder', icon: FolderIcon, label: 'Folder'},
+    {id: 'home', icon: HomeIcon},
+    {id: 'members', icon: MembersIcon},
+    {id: 'messages', icon: MessagesIcon},
+    {id: 'settings', icon: SettingsIcon},
+    {id: 'folder', icon: FolderIcon},
 ]
 
 const Navbar = () => {
@@ -25,7 +25,7 @@ const Navbar = () => {
                             <img 
                                 key={item.id} 
                                 src={item.icon} 
-                                alt={item.label} 
+                                alt={item.id} 
                                 className='w-5 h-5 cursor-pointer' 
                             />
                         </div>

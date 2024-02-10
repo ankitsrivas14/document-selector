@@ -5,15 +5,18 @@ import ArrowIcon from '../../assets/icons/arrow-right.svg';
 import Button from '../design-system/Button';
 import { ICON_NAME } from '../../constants/design-system';
 import { IconName } from '../../types/design-system';
+import { AGREEMENTS_PAGE_HEADING, SAVE_AND_CLOSE_CTA, createMessage } from '../../constants/messages';
 
 const Header = () => {
     return (
         <header className="px-6 py-4 border border-solid border-gray-3 sticky top-0 left-0 bg-white z-10">
             <div className="flex justify-between items-center mb-6">
                 <span className="text-2xl font-bold text-gray-4">
-                    Select Agreements, Notices and Other Documents
+                    {createMessage(AGREEMENTS_PAGE_HEADING)}
                 </span>
-                <Button startIcon={ICON_NAME.CROSS as IconName}>Save & Close</Button>
+                <Button startIcon={ICON_NAME.CROSS as IconName}>
+                    {createMessage(SAVE_AND_CLOSE_CTA)}
+                </Button>
             </div>
             <div className='flex'>
                 {APPLICATION_STEPS.map((step: ApplicationStepType, index) => (

@@ -6,18 +6,19 @@ import ListItem from "./design-system/ListItem";
 import SearchInput from "./design-system/SearchInput";
 import FormCard from "./shared/FormCard";
 import ArrowLeftIcon from '../assets/icons/arrow-left-light.svg'
+import { NO_DOCUMENTS_SELECTED_TEXT, SELECTED_DOCUMENTS, createMessage } from "../constants/messages";
 
 export const SelectedDocuments = () => {
     const { selectedDocs, updateSelectedDocs } = useDocSelector();
     return (
-        <FormCard heading="Selected Documents">
+        <FormCard heading={createMessage(SELECTED_DOCUMENTS)}>
             <SearchInput />
 
             {!selectedDocs?.length ? (
                 <div className="w-full h-full bg-gray-5 mt-3 rounded-md border border-gray-3 border-solid py-10 px-7 text-center">
                     <img src={ArrowLeftIcon} alt="Arrow Left" className="mx-auto mb-6" />
                     <div className="text-gray-6 text-sm font-semibold">
-                        Select documents from the left panel to have employees review them and provide a signature acknowledging review
+                        {createMessage(NO_DOCUMENTS_SELECTED_TEXT)}
                     </div>
                 </div>
             ) : (

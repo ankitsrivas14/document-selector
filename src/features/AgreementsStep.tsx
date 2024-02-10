@@ -1,16 +1,17 @@
 import DetailsCard from "../components/shared/DetailsCard";
 import AvailableDocuments from "../components/AvailableDocuments";
 import SelectedDocuments from "../components/SelectedDocuments";
+import { AGREEMENTS_PAGE_INFO_TEXT, DETAILS_CARD_DESCRIPTION, DETAILS_CARD_HEADING, createMessage } from "../constants/messages";
 
 const FormViewer = () => {
     return (
         <div className="mx-auto w-[1024px] mt-6 mb-[75px]">
             <DetailsCard 
-                title="Which agreements, forms and notices should be sent to Jason Smith?" 
-                description="Employees assigned to this job type will be required to review, where relevant fill-in, and sign the following agreements and notices:"
+                title={createMessage(DETAILS_CARD_HEADING)} 
+                description={createMessage(DETAILS_CARD_DESCRIPTION)}
             />
             <div className="text-gray-4 text-sm font-medium mb-2">
-                Select the agreements, notices and documents you want Jason Smith to sign
+                {createMessage(AGREEMENTS_PAGE_INFO_TEXT)}
             </div>
             <div className="flex gap-6 text-gray-4">
                 <AvailableDocuments />
