@@ -44,6 +44,7 @@ const FormViewer = () => {
                             <ListItem 
                                 key={doc.id} 
                                 name={doc.name} 
+                                startIconType={ICON_NAME.TICK as IconName}
                                 endIconType={ICON_NAME.CROSS as IconName}
                                 onItemClick={() => updateSelectedDocs(doc)}
                             />
